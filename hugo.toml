@@ -1,0 +1,44 @@
+baseURL = "https://blog.baileys.dev"
+languageCode = "en-au"
+title = "Bailey Butler"
+theme = "maverick"
+
+[permalinks]
+  pages = "/:slug"
+
+[params]
+  [params.comments]
+    enabled = false
+
+[pagination]
+  pageSize = 3
+
+[menu]
+  [[menu.main]]
+    identifier = "linkedin"
+    name = "LinkedIn"
+    url = "https://linkedin.com/in/baileybutler1"
+    weight = 10
+  [[menu.main]]
+    identifier = "github"
+    name = "GitHub"
+    url = "https://github.com/baely"
+    weight = 20
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 30
+  [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    url = "/posts/"
+    weight = 40
+
+[markup]
+  [markup.highlight]
+    # style = "doom-one"
+    style = "catppuccin-latte"
+
+[taxonomies]
+  tag = "tags"
