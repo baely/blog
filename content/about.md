@@ -3,6 +3,6 @@ title: "About"
 draft: false
 ---
 
-Software Engineer
+Software Engineer @ Atlassian
 
 Melbourne, Australia
