@@ -1,0 +1,11 @@
+{{ define "main" }}
+{{ with .Content }}<div class="home-subtitle">{{ . }}</div>{{ end }}
+
+<div class="section-label">Recent Posts</div>
+{{ range (where .Site.RegularPages "Section" "posts") | first 3 }}
+<div class="post-item">
+  <div class="post-item-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></div>
+  <time class="post-item-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
+</div>
+{{ end }}
+{{ end }}

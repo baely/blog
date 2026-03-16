@@ -1,7 +1,7 @@
 baseURL = "https://blog.baileys.dev"
 languageCode = "en-au"
 title = "Bailey Butler"
-theme = "maverick"
+theme = "mono"
 
 [permalinks]
   pages = "/:slug"
@@ -38,7 +38,8 @@ theme = "maverick"
 [markup]
   [markup.highlight]
     # style = "doom-one"
-    style = "catppuccin-latte"
+    noClasses = true
+    style = "monokailight"
 
 [taxonomies]
   tag = "tags"
