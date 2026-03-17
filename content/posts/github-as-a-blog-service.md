@@ -53,7 +53,7 @@ sequenceDiagram
 And thanks to how easy GitHub workflows and the GitHub API are
 to use, we were able to iterate on the workflow features on our trips, including:
 
-- Auto-translation of posts with OpenAI (this feature wasn't originally avaible)
+- Auto-translation of posts with OpenAI (this feature wasn't originally available)
 - Translation into other languages with comment commands on the post issue
 - Post reactions (by reacting to the GitHub issue, the reactions were live on
 the blog post.)
@@ -71,7 +71,7 @@ All together, this created for a beautifully simple process to blog our journey.
 
 ## Reflections
 
-Using GitHub as a platform for blogging seems slightly obsurd, and definitely
+Using GitHub as a platform for blogging seems slightly absurd, and definitely
 not what the service is intended for. However, the capability and flexibility of
 their feature set enabled me to do so with much ease. I appreciate how GitHub
 has made it so straightforward to build the "auxiliary" services on top of their
@@ -82,6 +82,6 @@ GitHub daily. For users who don't, they would likely be better served by a
 solution more tailored to what they are familiar with - may
 that be a traditional blogging platform like WordPress.
 
-Would I recemmond everyone waste a week engineering a blogging platform on top 
+Would I recommend everyone waste a week engineering a blogging platform on top 
 of GitHub? Probably not. But if you're an engineer that enjoys tailoring
 solutions to best enable your users? Why not.

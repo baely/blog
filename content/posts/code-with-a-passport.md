@@ -5,7 +5,7 @@ draft: false
 ---
 
 I am a sucker for a good logic puzzle. I am also a sucker for a good
-leaderboard. And  I am also also a sucker for a good software engineering
+leaderboard. And I am also also a sucker for a good software engineering
 problem - which is really just an extension of a good logic puzzle.
 
 It is quite fortunate then that PuzzleTeam host an array of logic puzzles online,
@@ -13,7 +13,7 @@ such as [Pipes](https://puzzle-pipes.com) and
 [Binairo](https://puzzle-binairo.com). It is also quite fortunate then that
 those online puzzles are backed by daily, weekly, monthly, and all-time
 leaderboards where people can compete to complete the puzzle in the shortest
-time. And it is also also quite fortunate that there is a seperate
+time. And it is also also quite fortunate that there is a separate
 "Robots / programmatic solvers" leaderboard for each of those puzzles.
 
 _This post will focus mainly on [Pipes](https://puzzle-pipes.com) and
@@ -60,7 +60,7 @@ def lock(grid: list[int], x: int) -> None:
     grid[x] = 1
 ```
 
-Or the abliity to check whether the whole grid was locked and therefore complete.
+Or the ability to check whether the whole grid was locked and therefore complete.
 
 ```python
 def locked_game(size: int, grid: list[int]) -> bool:
@@ -193,7 +193,7 @@ number of black and white dots, there must be no more than two dots of the
 same colour adjacent to each other, and each row and column must be unique.
 
 I will skip the tedious details, but I essentially followed the same process to
-codify and solve the puzzle. Programtically solve it in Python, _nice_. Move the
+codify and solve the puzzle. Programmatically solve it in Python, _nice_. Move the
 logic into a C extension, _nicer_. Do a complete rewrite into Go,
 _disappointment_. Disappointed only because, again, performance was only on par
 with the Python/C solution.
@@ -206,7 +206,7 @@ submission details), I noticed this in the networking tab.
 ![screenshot of chrome networking tab](/images/code-with-a-passport/network.png)
 
 Fetching the puzzle page was taking a whopping ~190ms. Double that to account
-for the submission request, and I figured ~380s was being chewed up on the
+for the submission request, and I figured ~380ms was being chewed up on the
 requests and responses making their long round trips.
 
 So I did some digging into the network requests that were being made to
@@ -259,7 +259,7 @@ information as to where each IP range is located.
 
 ![screenshot of csv file showing ip range and geo details](/images/code-with-a-passport/csv.png)
 
-A quick Google search for "Boardman, USA" lead me to find that it was a "City in
+A quick Google search for "Boardman, USA" led me to find that it was a "City in
 Oregon" (which matches the region code `US-OR`). And while I could infer that
 the IP address is located in the AWS region "us-west-2" aka "US West (Oregon)",
 I wasn't quite satisfied.
@@ -294,7 +294,7 @@ This was the moment I realised that my code didn't need a refactor, it needed a
 passport. A round trip from Melbourne to Oregon is expensive - about AUD$1800 by
 air, or about ~190ms by the wire.
 
-I could have done some further invesigation to determine whether the server
+I could have done some further investigation to determine whether the server
 was deployed onto: an EC2 instance, EKS, Elastic Beanstalk, whatever. But I
 figured I had enough to play around with.
 
@@ -307,7 +307,7 @@ With a returned sense of hope, I ran my solver.
 
 ![screenshot of binairo robotic leaderboard](/images/code-with-a-passport/leaderboard.png)
 
-Amazing! This was the result I could have only dreamed over. I had a recorded 
+Amazing! This was the result I could have only dreamed over. I had recorded 
 a speedy 2ms. Being the second fastest possible solution given the 1ms
 resolution, I was quite satisfied with my attempts and proud of my pole
 position. I ran my solver against all the other puzzle sizes to secure my
@@ -334,7 +334,7 @@ puzzle input. That is, to consider the time it takes for:
 3. The time to send and receive the submission request and response from the
 same server.
 
-My problem solving journey was incremental, but lead me to eventually think
+My problem solving journey was incremental, but led me to eventually think
 outside the box when finding areas of improvement. I was also only able to
 achieve greater results by persevering through the plateau of performance
 improvements. 
