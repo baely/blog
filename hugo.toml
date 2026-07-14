@@ -37,9 +37,9 @@ theme = "mono"
 
 [markup]
   [markup.highlight]
-    # style = "doom-one"
-    noClasses = true
-    style = "monokailight"
+    # class-based highlighting; palettes live in css/syntax.css
+    # (monokailight in light mode, monokai in dark)
+    noClasses = false
 
 [taxonomies]
   tag = "tags"
