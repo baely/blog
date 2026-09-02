@@ -26,16 +26,6 @@ theme = "mono"
     url = "/notes/"
     weight = 20
   [[menu.main]]
-    identifier = "projects"
-    name = "Projects"
-    url = "/projects/"
-    weight = 30
-  [[menu.main]]
-    identifier = "now"
-    name = "Now"
-    url = "/now/"
-    weight = 40
-  [[menu.main]]
     identifier = "about"
     name = "About"
     url = "/about/"
