@@ -20,6 +20,8 @@
   --border-faint: #2a2a2a;
 }
 
+html { overflow-x: clip; }
+
 body {
   font-family: system-ui, -apple-system, sans-serif;
   font-size: 16px;
@@ -27,6 +29,7 @@ body {
   color: var(--fg);
   background: var(--bg);
   -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
 }
 
 a { color: inherit; }
@@ -123,10 +126,107 @@ a:hover { opacity: 0.6; }
   margin-bottom: 20px;
 }
 
+.section-label-link {
+  color: inherit;
+  text-decoration: none;
+}
+.section-label-link:hover { color: var(--fg); opacity: 1; }
+
+/* Featured post (homepage hero) */
+.featured { margin-bottom: 60px; }
+
+.featured-cover {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.featured-cover img {
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 2 / 1;
+  object-fit: cover;
+}
+
+.featured-title {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: 4px;
+}
+
+.featured-title a { text-decoration: none; }
+
+.featured-summary {
+  margin-top: 12px;
+  color: var(--fg-muted);
+}
+
+.featured-more {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 13px;
+  color: var(--fg-faint);
+  text-decoration: none;
+}
+
+.featured-more:hover { color: var(--fg); opacity: 1; }
+
 /* Post list items */
 .post-item {
   margin-bottom: 32px;
 }
+
+.post-item-summary {
+  margin-top: 6px;
+  font-size: 14px;
+  color: var(--fg-muted);
+}
+
+/* Notes */
+.note {
+  padding-bottom: 28px;
+  margin-bottom: 28px;
+  border-bottom: 1px solid var(--border-faint);
+}
+
+.note:last-of-type { border-bottom: none; }
+
+.note-date {
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  color: var(--fg-faint);
+  text-decoration: none;
+}
+
+.note-date:hover { color: var(--fg); opacity: 1; }
+
+.note-title {
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 6px 0 4px;
+}
+
+.note-content { margin-top: 6px; }
+.note-content p:last-child { margin-bottom: 0; }
+
+.note-back {
+  margin-top: 32px;
+  font-size: 13px;
+}
+
+.note-back a {
+  color: var(--fg-faint);
+  text-decoration: none;
+}
+
+.note-back a:hover { color: var(--fg); opacity: 1; }
+
+/* Homepage notes strip */
+.home-note { margin-bottom: 24px; }
+.home-note-content p { margin-bottom: 4px; }
 
 .post-item-title {
   font-size: 18px;
@@ -176,6 +276,21 @@ a:hover { opacity: 0.6; }
 .pagination .disabled { color: var(--border); }
 
 /* Single post */
+.post-hero {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-top: -60px;
+  margin-bottom: 40px;
+}
+
+.post-hero img {
+  width: 100%;
+  height: auto;
+  max-height: 60vh;
+  object-fit: cover;
+  display: block;
+}
+
 .post-header { margin-bottom: 40px; }
 
 .post-title {
@@ -285,6 +400,13 @@ figcaption {
 /* Mermaid */
 .mermaid { margin: 20px 0; text-align: center; }
 
+/* Comments / reactions */
+.post-comments {
+  margin-top: 60px;
+  padding-top: 32px;
+  border-top: 1px solid var(--border-faint);
+}
+
 /* Mobile */
 @media (max-width: 640px) {
   .site-wrapper { padding: 40px 16px 32px; }
@@ -296,4 +418,6 @@ figcaption {
   .home-title { font-size: 26px; }
   .post-title { font-size: 24px; }
   .list-title { font-size: 24px; }
+  .featured-title { font-size: 22px; }
+  .post-hero { margin-top: -40px; }
 }

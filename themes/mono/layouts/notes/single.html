@@ -1,0 +1,12 @@
+{{ define "main" }}
+<article class="note note-single">
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
+    </div>
+    {{ with .Title }}<h1 class="post-title">{{ . }}</h1>{{ end }}
+  </header>
+  <div class="post-content">{{ .Content }}</div>
+  <p class="note-back"><a href="/notes/">← All notes</a></p>
+</article>
+{{ end }}
