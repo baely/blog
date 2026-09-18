@@ -1,0 +1,16 @@
+{{ define "main" }}
+<div class="home-intro">
+  <h1>{{ site.Params.homeHeading }}</h1>
+  {{ with .Content }}<div class="prose">{{ . }}</div>{{ else }}<p>{{ site.Params.introduction }}</p>{{ end }}
+</div>
+
+<section class="latest" aria-labelledby="latest-heading">
+  <div class="section-heading">
+    <h2 id="latest-heading">{{ site.Params.latestHeading }}</h2>
+    <a href="{{ (site.GetPage (printf "/%s" site.Params.mainSection)).RelPermalink }}">Archive <span aria-hidden="true">→</span></a>
+  </div>
+  {{- $notes := where site.RegularPages "Section" site.Params.mainSection -}}
+  {{- $notes = where $notes "Draft" false -}}
+  {{ partial "note-list.html" (dict "notes" ($notes.ByDate.Reverse | first 5)) }}
+</section>
+{{ end }}

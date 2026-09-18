@@ -1,0 +1,23 @@
+{{ define "main" }}
+<header class="page-heading">
+  <p class="eyebrow">All writing</p>
+  <h1>{{ .Title }}</h1>
+  {{ with .Description }}<p>{{ . }}</p>{{ end }}
+  {{ with .Content }}<div class="prose">{{ . }}</div>{{ end }}
+</header>
+{{ $notes := (where .Pages "Draft" false).ByDate.Reverse }}
+{{ if $notes }}
+<ol class="archive-list">
+  {{ range $notes }}
+  <li>
+    <article class="archive-entry">
+      <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+      {{ if not .Date.IsZero }}<time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 Jan 2006" }}</time>{{ end }}
+    </article>
+  </li>
+  {{ end }}
+</ol>
+{{ else }}
+<p class="empty-state">There is no published writing yet.</p>
+{{ end }}
+{{ end }}

@@ -1,0 +1,9 @@
+{{ define "main" }}
+<div class="not-found">
+  <p class="eyebrow">404</p>
+  <h1>That page isn’t here.</h1>
+  <p>It may have moved, or the address may be wrong.</p>
+  <p><a href="{{ site.Home.RelPermalink }}">Go home</a> <span aria-hidden="true">·</span> <a href="{{ (site.GetPage (printf "/%s" site.Params.mainSection)).RelPermalink }}">Browse writing</a></p>
+</div>
+{{ end }}
+
