@@ -2,6 +2,7 @@ baseURL = "https://blog.baileys.dev"
 languageCode = "en-au"
 title = "Bailey Butler"
 theme = "shared"
+themesDir = "../themes"
 timeZone = "Australia/Melbourne"
 
 [permalinks]

@@ -3,6 +3,7 @@ languageCode = 'en-AU'
 timeZone = 'Australia/Melbourne'
 title = 'Notes and ramblings'
 theme = 'shared'
+themesDir = "../themes"
 enableRobotsTXT = true
 buildDrafts = true
 disableKinds = ['taxonomy', 'term']
