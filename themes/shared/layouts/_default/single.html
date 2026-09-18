@@ -1,0 +1,13 @@
+{{ define "main" }}
+<article class="note">
+  <header class="note__header">
+    <a class="back-link" href="{{ (site.GetPage (printf "/%s" site.Params.mainSection)).RelPermalink }}"><span aria-hidden="true">←</span> Archive</a>
+    <h1>{{ .Title }}</h1>
+    {{ if not .Date.IsZero }}<time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>{{ end }}
+    {{ with .GetTerms "tags" }}<p>{{ range . }}<a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a> {{ end }}</p>{{ end }}
+  </header>
+  <div class="prose">
+    {{ .Content }}
+  </div>
+</article>
+{{ end }}

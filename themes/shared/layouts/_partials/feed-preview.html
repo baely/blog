@@ -1,0 +1,24 @@
+{{- /* Keep opening paragraphs intact, stopping before a section heading.
+     Aim for 120 words, allow 150 to finish a paragraph, and cap unusually
+     long opening paragraphs or non-paragraph content at 120 words. */ -}}
+{{- $opening := replaceRE `(?s)<h[1-6][ >].*$` "" .Content -}}
+{{- $paragraphs := findRE `(?s)<p(?:\s[^>]*)?>.*?</p>` $opening -}}
+{{- $count := 0 -}}
+{{- $preview := "" -}}
+{{- range $paragraphs -}}
+  {{- $words := len (findRE `\S+` (. | plainify | htmlUnescape)) -}}
+  {{- if or (ge $count 120) (and (gt $count 0) (gt (add $count $words) 150)) -}}
+    {{- break -}}
+  {{- end -}}
+  {{- if and (eq $count 0) (gt $words 150) -}}
+    {{- break -}}
+  {{- end -}}
+  {{- $preview = printf "%s%s" $preview . -}}
+  {{- $count = add $count $words -}}
+{{- end -}}
+{{- if gt $count 0 -}}
+  {{- $preview | safeHTML -}}
+{{- else -}}
+  {{- $words := findRE `\S+` .Plain -}}
+  <p>{{ delimit (first 120 $words) " " }}{{ if gt (len $words) 120 }}…{{ end }}</p>
+{{- end -}}

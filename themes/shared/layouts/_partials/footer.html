@@ -1,0 +1,12 @@
+<footer class="site-footer">
+  <div>
+    <p class="footer-heading">Elsewhere</p>
+    <nav class="footer-links" aria-label="Elsewhere">
+      {{ if eq site.Params.mainSection "posts" }}<a href="https://baely.au/">Notes</a>{{ else }}<a href="https://blog.baileys.dev/">Blog</a>{{ end }}
+      <a href="https://github.com/baely">GitHub</a>
+      <a href="https://www.instagram.com/bae1y/">Instagram</a>
+    </nav>
+  </div>
+  <a class="rss-link" href="{{ with site.GetPage (printf "/%s" site.Params.mainSection) }}{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}{{ end }}">RSS</a>
+</footer>
+

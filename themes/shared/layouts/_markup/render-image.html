@@ -1,0 +1,4 @@
+{{- $alt := .Text | plainify -}}
+<button class="image-theatre-trigger" type="button" aria-label="{{ with $alt }}Open image: {{ . }}{{ else }}Open image{{ end }}">
+  <img src="{{ .Destination | safeURL }}" alt="{{ $alt }}"{{ with .Title }} title="{{ . }}"{{ end }} loading="lazy" decoding="async">
+</button>
