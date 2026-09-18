@@ -1,0 +1,32 @@
+{{- if .notes -}}
+<ol class="note-list">
+  {{- range .notes }}
+  {{- $excerpt := gt .WordCount 250 -}}
+  <li>
+    <article class="feed-entry{{ if $excerpt }} feed-entry--excerpt{{ end }}">
+      <header class="feed-entry__header">
+        <a class="feed-entry__permalink" href="{{ .RelPermalink }}" aria-label="Permalink: {{ .Title }}">
+          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>
+        </a>
+        {{- if not .Params.hide_title }}
+        <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+        {{- end }}
+      </header>
+      {{- if $excerpt }}
+      <div class="feed-entry__summary">
+        {{ partial "feed-preview.html" . }}
+      </div>
+      <a class="feed-entry__continue" href="{{ .RelPermalink }}" aria-label="Continue reading: {{ .Title }}">Continue reading <span aria-hidden="true">→</span></a>
+      {{- else }}
+      <div class="prose feed-entry__body">{{ .Content }}</div>
+      {{- end }}
+    </article>
+  </li>
+  {{- end }}
+</ol>
+{{- else -}}
+<div class="empty-state">
+  <p>There are no published notes yet.</p>
+  <p>The first one will appear here when it’s ready.</p>
+</div>
+{{- end -}}

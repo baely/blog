@@ -1,0 +1,14 @@
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="wordmark" href="{{ site.Home.RelPermalink }}" aria-label="{{ site.Title }}, home"><span>Bailey</span></a>
+    <nav aria-label="Primary">
+      <a href="{{ (site.GetPage (printf "/%s" site.Params.mainSection)).RelPermalink }}"{{ if eq .Section site.Params.mainSection }} aria-current="page"{{ end }}>Archive</a>
+      {{ range site.Menus.main }}{{ if ne .Identifier "posts" }}<a href="{{ .URL }}">{{ .Name }}</a>{{ end }}{{ end }}
+      <button class="theme-toggle" type="button" data-theme-toggle>
+        <span class="theme-toggle__icon" aria-hidden="true"></span>
+        <span class="visually-hidden" data-theme-label>System</span>
+      </button>
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,55 @@
+baseURL = "https://blog.baileys.dev"
+languageCode = "en-au"
+title = "Bailey Butler"
+theme = "shared"
+timeZone = "Australia/Melbourne"
+
+[permalinks]
+  pages = "/:slug"
+
+[params]
+  author = "Bailey Butler"
+  description = "A blog about tech, and other stuff."
+  introduction = "A blog about tech, and other stuff."
+  homeHeading = "Writing from Bailey."
+  mainSection = "posts"
+  latestHeading = "Latest posts"
+  [params.comments]
+    enabled = false
+
+[pagination]
+  pageSize = 3
+
+[menu]
+  [[menu.main]]
+    identifier = "linkedin"
+    name = "LinkedIn"
+    url = "https://linkedin.com/in/baileybutler1"
+    weight = 10
+  [[menu.main]]
+    identifier = "github"
+    name = "GitHub"
+    url = "https://github.com/baely"
+    weight = 20
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 30
+  [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    url = "/posts/"
+    weight = 40
+
+[markup]
+  [markup.highlight]
+    # style = "doom-one"
+    noClasses = true
+    style = "monokailight"
+
+[taxonomies]
+  tag = "tags"
+
+[markup.goldmark.renderer]
+  wrapStandAloneImageWithinParagraph = false

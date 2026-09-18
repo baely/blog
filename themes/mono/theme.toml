@@ -1,6 +1,0 @@
-name = "mono"
-license = "MIT"
-description = "Brutalist minimalist Hugo theme — monochromatic, sharp corners, system fonts"
-
-[author]
-  name = "Bailey Butler"

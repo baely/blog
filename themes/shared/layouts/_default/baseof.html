@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="{{ site.Language.LanguageCode }}">
+<head>
+  {{ partial "head.html" . }}
+</head>
+<body>
+  {{ partial "header.html" . }}
+  <main id="main-content">
+    {{ block "main" . }}{{ end }}
+  </main>
+  {{ partial "footer.html" . }}
+  <dialog class="image-theatre" aria-label="Expanded image">
+    <button class="image-theatre__close" type="button" aria-label="Close image"><span aria-hidden="true">×</span></button>
+    <img alt="">
+  </dialog>
+  <script src="{{ "js/theme.js" | relURL }}" defer></script>
+  <script src="{{ "js/image-theatre.js" | relURL }}" defer></script>
+  {{ if .Page.Store.Get "hasMermaid" }}
+  <script type="module">
+    import mermaid from "https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs";
+    mermaid.initialize({ startOnLoad: true });
+  </script>
+  {{ end }}
+</body>
+</html>

@@ -1,0 +1,6 @@
+.git
+.claude
+public
+**/.hugo_build.lock
+**/resources
+.content/.git
