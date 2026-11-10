@@ -18,7 +18,7 @@ It wouldn't be a good trip for me if I didn't at least do *something*, so I did 
 
 While the tour was nice to have an experience learning about Fiji, I ended up learning a lot more from our taxi driver who took us on the two hour drive between resorts (which was supposed to be under an hour but we were travelling on Fiji time). He spoke on about the experiences of Fijian people, about his own family traditions and values, about the positive or negative impacts outsiders have on Fiji and its people, about the effects of climate change on the island, and of the degree of opportunity Fijian people have.
 
-I was drawn to a story he told me about caring for his grandchildren so they can attend a school near his village since access to schools can be limited for some villages and his daughters had moved far away after getting married. I grew a deep appreciation for the sense of community I saw from him and from the village we visited, all while taking in stride with their laid-back island vibe. I really enjoyed hearing all of their stories so I'm grateful they were willing to share them.
+I was drawn to a story he told me about caring for his grandchildren so they can attend a school near his village since access to schools can be limited for some villages and his daughters had moved far away after getting married. I grew a deep appreciation for the sense of community I saw from him and from the village we visited which seemed to complement their laid-back island vibe. I really enjoyed hearing all of their stories so I'm grateful they were willing to share them.
 
 ![A nice restaurant surrounded by tropical plans and trees, with a dusk sun.](/images/img4499.jpeg)
 
