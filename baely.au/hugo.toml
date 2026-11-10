@@ -15,6 +15,15 @@ disableKinds = ['taxonomy', 'term']
   description = 'Personal notes, rambling, and occasionally longer essays.'
   author = 'Bailey Butler'
   introduction = "My personal notes, rambling, and occasionally longer essays."
+  [[params.links]]
+    name = "baileybutler.au"
+    url = "https://baileybutler.au/"
+  [[params.links]]
+    name = "Instagram"
+    url = "https://www.instagram.com/bae1y/"
+  [[params.links]]
+    name = "Letterboxd"
+    url = "https://letterboxd.com/baely"
 
 [permalinks]
   notes = '/notes/:year-:month-:day/'

@@ -14,6 +14,18 @@ timeZone = "Australia/Melbourne"
   introduction = "A blog about tech, and other stuff."
   mainSection = "posts"
   latestHeading = "Latest posts"
+  [[params.links]]
+    name = "baileybutler.au"
+    url = "https://baileybutler.au/"
+  [[params.links]]
+    name = "GitHub"
+    url = "https://github.com/baely"
+  [[params.links]]
+    name = "LinkedIn"
+    url = "https://linkedin.com/in/baileybutler1"
+  [[params.links]]
+    name = "Instagram"
+    url = "https://www.instagram.com/bae1y/"
   [params.comments]
     enabled = false
 
