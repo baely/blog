@@ -1,6 +1,6 @@
 {{ define "main" }}
 <div class="home-intro">
-  <h1>{{ site.Params.homeHeading }}</h1>
+  {{ with site.Params.homeHeading }}<h1>{{ . }}</h1>{{ end }}
   {{ with .Content }}<div class="prose">{{ . }}</div>{{ else }}<p>{{ site.Params.introduction }}</p>{{ end }}
 </div>
 

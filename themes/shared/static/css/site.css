@@ -275,7 +275,7 @@ h1, h2, h3 {
 .prose.feed-entry__body h2 { font-family: var(--ui); font-size: 1.25rem; font-weight: 700; margin-top: 1.5em; }
 .prose.feed-entry__body h3 { font-family: var(--ui); font-size: 1.1rem; font-weight: 700; margin-top: 1.5em; }
 .feed-entry__body > :first-child { margin-top: 0; }
-.feed-entry__body .image-theatre-trigger { width: 100%; max-width: 100%; margin: 1.5rem 0 0; transform: none; }
+.feed-entry .image-theatre-trigger { width: 100%; max-width: 100%; margin: 1.5rem 0 0; transform: none; }
 .note__header time {
   color: var(--muted);
   font-family: var(--ui);
@@ -300,7 +300,6 @@ h1, h2, h3 {
 
 .note { padding-block: clamp(3rem, 8vw, 6rem) var(--space-5); }
 .note__header { margin-bottom: clamp(1.75rem, 4vw, 2.5rem); }
-.back-link { display: inline-block; margin-bottom: var(--space-3); font-family: var(--ui); font-size: var(--text-small); }
 .note__header h1 { max-width: 18ch; margin-bottom: var(--space-2); }
 
 .prose { font-size: clamp(1.05rem, 1.5vw, 1.16rem); }
@@ -431,7 +430,7 @@ h1, h2, h3 {
 }
 
 @media print {
-  .skip-link, .site-header, .site-footer, .back-link, .image-theatre { display: none; }
+  .skip-link, .site-header, .site-footer, .image-theatre { display: none; }
   :root,
   :root[data-theme='light'],
   :root[data-theme='dark'] { color-scheme: light; --paper: #fff; --ink: #000; --muted: #555; --faint: #ccc; --soft: #eee; }

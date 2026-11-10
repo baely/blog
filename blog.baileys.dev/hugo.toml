@@ -12,7 +12,6 @@ timeZone = "Australia/Melbourne"
   author = "Bailey Butler"
   description = "A blog about tech, and other stuff."
   introduction = "A blog about tech, and other stuff."
-  homeHeading = "Writing from Bailey."
   mainSection = "posts"
   latestHeading = "Latest posts"
   [params.comments]
